@@ -60,17 +60,17 @@ class Item:
             )
 
     @staticmethod
-    def is_integer(self):
+    def is_integer(num):
         """
         is_integer() : return True if a number is an integer, else return False
         """
-        if isinstance(self, float):
+        if isinstance(num, float):
             # Count out the floats that are point zero
-            return self.is_integer()
-        elif isinstance(self, int):
+            return num.is_integer()
+        elif isinstance(num, int):
             return True
         return False
-        
+       
 
     def __repr__(self):
         """
@@ -82,7 +82,7 @@ class Item:
 
 
 if __name__ == "__main__":
-    print(Item.is_integer(7.2))
+    print(Item.is_integer(7.0))
     # print(Item.all)
     # print(Item.__dict__) # All of attributes for Class level
     # print(item1.__dict__) # All of attributes for instance level
